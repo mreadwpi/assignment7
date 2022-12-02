@@ -97,3 +97,18 @@ h3 {font-size: 20px;}
     margin: auto;
     max-width: 1300px;
 }
+
+@media (min-width: 600px) {
+    .about_me {
+        display: grid;
+        grid-template-columns: 200px;
+    }
+    .about_me_img {
+        grid-row: 1 / -1;
+        grid-column: 2;
+    }
+    .section_title_about,
+    .section_subtitle_about {
+    grid-column: 1;
+    }
+}
