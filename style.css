@@ -15,6 +15,32 @@ body {
     line-height: 2;
 }
 
+
+header {
+    text-align: center;
+    padding: 2px;
+    font-size: 25px;
+}
+
+.nav_list,
+.nav_link {
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav_list {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin: 2px;
+    padding: 0;
+}
+
+.nav_item {
+    margin: 10px;
+}
+
+
 section {
     padding: 20px 20px;
 }
@@ -101,14 +127,64 @@ h3 {font-size: 20px;}
 @media (min-width: 600px) {
     .about_me {
         display: grid;
-        grid-template-columns: 200px;
+        grid-template-columns: 900px;
+        grid-column-gap: 20px;
+        grid-template-areas: 
+            "title img"
+            "subtitle img"
+            "text img"
+    
     }
     .about_me_img {
-        grid-row: 1 / -1;
-        grid-column: 2;
+        grid-area: img;
+        width: 400px;
     }
-    .section_title_about,
-    .section_subtitle_about {
-    grid-column: 1;
-    }
+    .section_title_about {
+        grid-area: title;
+    }   
+}
+
+.myprojects {
+    background-color: beige;
+    text-align: center;
+    margin: 20px;
+}
+
+.portfolio {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(300px, 1fr));
+    margin: 20px;
+}
+
+.portfolio_img {
+    height: 400px;
+}
+
+.portfolio_desc {
+    font-size: large;
+    font-weight: 400;
+}
+
+footer {
+    text-align: center;
+    padding: 2px;
+    font-size: 25px;
+}
+
+.social_list_link,
+.footer_link {
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.social_list {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin: 2px;
+    padding: 0;
+}
+
+.social_list_item {
+    margin: 10px;
 }
